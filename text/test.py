@@ -1,4 +1,4 @@
-f = open("../text/10000.txt", "r")
+f = open("10000.txt", "r")
 i=0
 for z in f:
     if z.rstrip().isdigit():
