@@ -6,7 +6,7 @@ Ebenfalls ist hier noch das GUI-Programm, mit QT, die einen Windwos-Dialog öffn
 
 
 Viel Spaß
-J.
+Jonatan | KreisijoLP
 ------------------
 
 Helle there!
@@ -14,4 +14,4 @@ this is my GitHub Repo for the Project Class in Computer Since.
 Here are some examples of interpreting Txt-Files as well as an GUI to select Txt-Files and then print them.
 
 Have Fun
-J. 
+Jonatan | KreisijoLP
