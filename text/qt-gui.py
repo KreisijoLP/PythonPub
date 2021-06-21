@@ -114,7 +114,7 @@ class openFileWithGui(QWidget):
         self.setLayout(outerlayout)
 
     def openfile(self):
-        allowedFiles = "Text Files (*.txt)"#Add if needed: ;;Any File (*.*)
+        allowedFiles = "Text Files (*.txt);;Any File (*.*)"#Add if needed: ;;Any File (*.*)
         name = QFileDialog.getOpenFileName(self, 'Open File any Text File', str(Path.home()), allowedFiles)
         ns = str(name)
         print(name)
