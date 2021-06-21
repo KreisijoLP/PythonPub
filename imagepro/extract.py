@@ -126,10 +126,10 @@ class Manager():
 
 class QT(QWidget):
 
-    def __init__(self, args):
+    def __init__(self):
         super(QT, self).__init__()
         self.load()
-        self.manager = args.manager
+        #self.manager = args.manager
 
     def extFile(self):
 
@@ -139,7 +139,9 @@ class QT(QWidget):
         text = self.showDialog()
         print(text)
 
-        manager.extFile(text, name)
+        #manager.extFile(text, name)
+        ei = extractImages()
+        ei.ext(path=name, extra=text, extrause=True)
 
     def showDialog(self):
         text, result = QInputDialog().getText(self, 'Input', 'Enter Type of Video:')
@@ -164,8 +166,8 @@ class QT(QWidget):
 
 if __name__ == "__main__":
     manager = Manager()
-    #app = QApplication()
-    #gui = QT()
+    app = QApplication()
+    gui = QT()
     #gui.__init__(manager)
-    #gui.show()
-    #sys.exit(app.exec_())
+    gui.show()
+    sys.exit(app.exec_())
