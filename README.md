@@ -1,4 +1,4 @@
-# PythonPub
+# Python
 Hallo!
 
 Hier findet ihr mein Beispiel für das Passwort Programm bzw. den Interpreter für die Config-Datai.
@@ -8,6 +8,7 @@ Ebenfalls ist hier noch das GUI-Programm, mit QT, die einen Windwos-Dialog öffn
 Viel Spaß
 Jonatan | KreisijoLP
 ------------------
+#Python
 
 Helle there!
 this is my GitHub Repo for the Project Class in Computer Since.

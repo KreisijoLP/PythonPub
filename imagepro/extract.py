@@ -5,6 +5,8 @@ import numpy as np
 from PySide2.QtWidgets import *
 from pathlib import Path
 import os
+import json
+
 i = 0
 imax = 0
 class extractImages():
@@ -54,11 +56,80 @@ class extractImages():
             cap.release()
             c.destroyAllWindows()
 
-class QT(QWidget):
+class Manager():
 
     def __init__(self):
+        self.load()
+
+    def load(self):
+        try:
+
+            with open("./dataset/settings.json", "r") as jsonFile:
+                self.jsonObject = json.load(jsonFile)
+                jsonFile.close()
+
+            test = self.jsonObject['test']
+
+            print("yes")
+            self.dirs = []
+            self.dirs = self.jsonObject['dirs']
+            print(self.dirs)
+
+        except IOError:
+
+            try:
+                os.makedirs("./dataset")
+            except FileExistsError:
+                pass
+
+            with open("./dataset/settings.json", "w") as jsonFile:
+
+                ar = []
+
+                jsonData = {
+
+                    "test": "yes",
+                    "dirs": ar
+
+                }
+
+                json.dump(jsonData, jsonFile)
+                jsonFile.close()
+
+            with open("./dataset/settings.json", "r") as jsonFile:
+                self.jsonObject = json.load(jsonFile)
+                jsonFile.close()
+
+            self.dirs = self.jsonObject['dirs']
+
+
+
+    def addData(self, args):
+
+        self.dirs.add(args.name)
+        jsonObject = json.loads(self.jsonObject)
+        jsonObject
+
+
+    def extFile(self, args):
+        name = args.name
+        text = args.text
+
+        if self.dirs.contains(text):
+            pass
+
+        ei = extractImages()
+        ei.ext(path=name, extra=text, extrause=True)
+
+
+
+
+class QT(QWidget):
+
+    def __init__(self, args):
         super(QT, self).__init__()
         self.load()
+        self.manager = args.manager
 
     def extFile(self):
 
@@ -67,8 +138,8 @@ class QT(QWidget):
 
         text = self.showDialog()
         print(text)
-        ei = extractImages()
-        ei.ext(path=name, extra=text, extrause=True)
+
+        manager.extFile(text, name)
 
     def showDialog(self):
         text, result = QInputDialog().getText(self, 'Input', 'Enter Type of Video:')
@@ -92,7 +163,9 @@ class QT(QWidget):
 
 
 if __name__ == "__main__":
-    app = QApplication()
-    gui = QT()
-    gui.show()
-    sys.exit(app.exec_())
+    manager = Manager()
+    #app = QApplication()
+    #gui = QT()
+    #gui.__init__(manager)
+    #gui.show()
+    #sys.exit(app.exec_())
