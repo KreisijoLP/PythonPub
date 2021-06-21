@@ -1,0 +1,66 @@
+----------------
+primitiver Start
+----------------
+
+hier wird das wichtige centralWidget durch ein Label repräsentiert.
+
+anwendungTyp1 und anwendungTyp2 machen das im Prinzip das Gleiche,
+nur aus leicht unterschiedlicher Perspektive:
+- anwendungTyp1 IST das Hauptfenster
+- anwendungTyp2 HAT das Hauptfenster und ist eine QApplication.
+  => aus self.  wird nun self.main_window.
+
+In anwendungTyp1 in den Schritten 2,3 und 4 holt man sich
+die entsprechende Komponente aus dem Hauptfenster und
+kann sie dann manipulieren, zB
+        status_bar = self.statusBar()        
+        status_bar.showMessage('Ready')
+Zu Schritt 1 habe ich nichts gefunden, das sieht jetzt etwas anders aus.
+
+
+------------------------------
+a - Konzentration aufs Zentrum
+------------------------------
+
+hier soll das centralWidget aufgbebohrt werden, um mehrere Elemente zu bekommen.
+das wird wohl über ein Layout erfolgen.
+
+
+-----------------------------
+b - Konzentration aufs Layout
+-----------------------------
+
+Aus dem einfachen vertikalen Layout wird ein 5x3-Gridlayout.
+
+
+
+------------------------------
+f - noch ohne (aktive) Threads
+------------------------------
+
+Eine lange Berechnung verzögert die Ausführung der GUI-Haupt-Schleife:
+Fenster werden nicht mehr aktualisiert.
+
+In dieser Version kann man gut beobachten, dass
+- sowohl im Label als auch in der StatusBar -
+die 'calculating ...'-Ausgaben nicht erscheinen,
+sehr wohl aber die 'ready'-Ausgaben.
+Das liegt daran, dass die Haupt-Routine von Qt
+erst am Ende wieder zum Zuge kommt.
+
+Lösung: die lange Berechnung in einen Thread auslagern.
+
+-----------------------------
+g - mit aktivem Thread
+-----------------------------
+
+
+
+
+
+
+
+
+
+
+

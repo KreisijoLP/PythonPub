@@ -1,0 +1,61 @@
+---------------------------------
+beispiel
+---------------------------------
+
+Fenster mit 'Hello World'
+
+
+---------------------------------
+beispiel2
+---------------------------------
+
+Fenster mit einigen sinnfreien Dialogen
+
+
+---------------------------------
+beispiel3
+---------------------------------
+
+Fenster mit Fortschrittsbalken
+
+
+---------------------------------
+beispiel3b
+---------------------------------
+
+Fenster mit Fortschrittsbalken
+
+
+---------------------------------
+beispiel3c
+---------------------------------
+
+Fenster mit Fortschrittsbalken
+und einigen Dialogelementen, die den Fortschritt steuern.
+
+
+---------------------------------
+beispiel4
+---------------------------------
+
+Fenster mit Dateidialog
+
+
+---------------------------------
+beispiel5
+---------------------------------
+
+Fenster mit Dateidialog und Editor
+
+
+---------------------------------
+beispiel6
+---------------------------------
+
+Fenster mit Menu und Editor
+
+
+
+
+
+
