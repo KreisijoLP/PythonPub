@@ -1,0 +1,6 @@
+Mathematik	Naturwissenschaft
+Informatik	Naturwissenschaft
+Philosophie	Gesellschaftswissenschaft
+Soziologie	Gesellschaftswissenschaft
+Franzoesisch	Sprache
+

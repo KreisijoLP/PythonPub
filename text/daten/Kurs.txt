@@ -1,0 +1,9 @@
+1	Shell-Programmierung	109	Informatik	1	0
+2	Logik	42	Informatik	2	3
+3	GTI	110	Informatik	2	1
+4	Kritik am Kreis	1694	Philosophie	3	2
+5	Komplexitätstheorie	58	Informatik	4	0
+6	Diskrete Strukturen	73	Mathematik	2	4
+7	Datenbanken	815	Informatik
+
+	

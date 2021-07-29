@@ -1,0 +1,10 @@
+id	nachname	vorname	fach1	fach2
+INT	VARCHAR(45)	VARCHAR(45)	VARCHAR(45)	VARCHAR(45)
+1	Torwalds	Linus	Informatik	Mathematik
+2	Turing	Alan	Mathematik	Informatik
+3	Voltaire	---	Philosophie	Franzoesisch
+4	Wegener	Ingo	Informatik	Soziologie
+5	Doof	Peter	Soziologie	Mathematik
+
+
+
